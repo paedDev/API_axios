@@ -8,48 +8,60 @@
 </head>
 <body>
     <div class="container">
-        <h1>Lets find something you want to do ✌️</h1>
-        <form action="/" method="POST" class="form" id="form">
+        <h1 class="title">Lets find something you want to do👇</h1>
+        <form action="/" method="post" id="form" class="form">
             <select name="type" class="form-select">
                 <option value="" data-display="Select">Random Type</option>
-                <option value="education">education</option>
-                <option value="charity">charity</option>
-                <option value="recreational">recreational</option>
-                <option value="busywork">busywork</option>
-                <option value="social">social</option>
-                <option value="diy">diy</option>
-                <option value="music">music</option>
+                <option value="Education">Education</option>
+                <option value="Charity">Charity</option>
+                <option value="Recreational">Recreational</option>
+                <option value="Relaxation">Relaxation</option>
+                <option value="Busywork">Busywork</option>
+                <option value="Social">Social</option>
+                <option value="Diy">Diy</option>
+                <option value="Music">Music</option>
             </select>
             <select name="participants" class="form-select">
+                <option value="">Any number of people</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
             </select>
             <button type="submit" class="form-submit">Go</button>
-        </form> 
+        </form>
 
 
 
         <section id="cards" class="cards">
+            <% if (locals.data) { %>
             <article class="card-item">
                 <h2 class="card-activity">
-
+                    <%=data.activity %>
                 </h2>
                 <div class="card-info">
                     <span class="card-type">
-      
+                        <%= data.type %>
                      
                     </span>
                     <span class="card-participants">
+                        participants <%= data.participants %>
        
                         <span class="card-number"></span>
                     </span>
                 </div>
             </article>
+        <% } %>
+
+        <% if (locals.error){ %>
+            <div class="tag-error" id="tag-error">
+                <%=error %>
+
+            </div>
 
 
+
+            <% } %>
         </section>
     </div>
 </body>

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(212, 208, 208);
+    padding: 20px;
+}
+.title{
+    color: black;
+    margin-bottom: 20px;
+}
+.form{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.form-select , .form-submit{
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#cards{
+    background-color: rgb(243, 243, 243);
+    width: 70%;
+    height: 20vh;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(77, 72, 72);
+
+}
+.card-item{
+    background-color: red;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
